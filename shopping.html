@@ -2,27 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf</title>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Shopping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script type="module" crossorigin src="/BookShelf_Team_Project/commonHelpers.js"></script>
+    <script type="module" crossorigin src="/BookShelf_Team_Project/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/BookShelf_Team_Project/assets/vendor-df1a5b03.js">
     <link rel="modulepreload" crossorigin href="/BookShelf_Team_Project/assets/dark-light-switcher-6656f4fc.js">
-    <link rel="stylesheet" href="/BookShelf_Team_Project/assets/vendor-a0b14d8a.css">
     <link rel="stylesheet" href="/BookShelf_Team_Project/assets/dark-light-switcher-a8edb92b.css">
+    <link rel="stylesheet" href="/BookShelf_Team_Project/assets/vendor-a0b14d8a.css">
   </head>
   <body>
     <header class="header">
@@ -212,20 +202,8 @@
 </div>
 
     <main>
-      <div class="container main-container">
-        <div class="left-main">
-          <section class="categories">
-  <h2 class="hidden">Categories</h2>
-  <div class="categories-div">
-    <ul class="categories-list">
-      <li class="categories-item">
-        <input type="radio" id="categoriesMain" name="category" class="categories-button"/>
-        <label for="categoriesMain" class="categories-label active">All Categories</label>
-      </li>
-    </ul>
-  </div>
-</section>
-          <section class="support support-for-shopping">
+        <div class="container shopping-box">
+        <section class="support support-for-shopping">
     <h3 class="support-title">
     Support Ukraine
     <svg class="support-svg" width="20px" height="32px">
@@ -249,28 +227,41 @@
   </div>
   </section>
   
-        </div>
-        <section class="book-block">
-  <h2 class="hidden">Best sellers</h2>
-  <div class="book-block-container">
-    <h1 class="book-block-title">
-      Best Sellers <span class="book-block-title-accent">Books</span>
-    </h1>
-    <div class="loader-backdrop is-hidden">
-      <span class="loader"></span>
-    </div>
-    <div class="book-block-list"></div>
+        <section class="shopping-section">
+  <h1 class="shopping-header">
+    Shopping
+    <span class="shopping-span">List</span>
+  </h1>
+  <div class="no-books">
+    <p class="no-books-text">
+      This page is empty, add some books and proceed to order.
+    </p>
+    <img
+      src="../img/books-shopping-list@1x-min.png"
+      alt="stack of books"
+      class="no-books-img"
+      srcset="/BookShelf_Team_Project/assets/books-shopping-list@1x-min-a8e7c57b.png 1x, /BookShelf_Team_Project/assets/books-shopping-list@2x-min-cbdb2a4c.png 2x"
+    />
+  </div>
+  <div class="shopping-list">
+    <ul class="books-list"></ul>
+  </div>
+  <div id="tui-pagination-container" class="tui-pagination"></div>
+  <div class="loader-backdrop is-hidden">
+    <span class="loader"></span>
   </div>
 </section>
 
-      </div>
-    </main>
-
-    
-    <div class="modal" id="bookModal"></div>
-
-
-    <!-- Modal window-->
+        </div>
+      </main>
+      <button class="scroll-up">
+    <span class="scroll-up-span">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3.37495 14.7L11.775 6.275C11.875 6.175 11.9833 6.10433 12.0999 6.063C12.2166 6.021 12.3416 6 12.4749 6C12.6083 6 12.7333 6.021 12.8499 6.063C12.9666 6.10433 13.075 6.175 13.175 6.275L21.6 14.7C21.8333 14.9333 21.95 15.225 21.95 15.575C21.95 15.925 21.825 16.225 21.575 16.475C21.325 16.725 21.0333 16.85 20.7 16.85C20.3666 16.85 20.075 16.725 19.825 16.475L12.4749 9.125L5.12495 16.475C4.89161 16.7083 4.60428 16.825 4.26295 16.825C3.92095 16.825 3.62495 16.7 3.37495 16.45C3.12495 16.2 2.99995 15.9083 2.99995 15.575C2.99995 15.2417 3.12495 14.95 3.37495 14.7Z" fill="white"/>
+        </svg>
+    </span>
+</button>
+      <!-- Modal window-->
 <div class="sign-in-backdrop is-hidden js-signin-form">
   <div class="sign-in-modal">
     <button class="sign-in-close-btn js-close-signin" type="button">
@@ -378,13 +369,7 @@
   </div>
 </div>
 
-    <button class="scroll-up">
-    <span class="scroll-up-span">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M3.37495 14.7L11.775 6.275C11.875 6.175 11.9833 6.10433 12.0999 6.063C12.2166 6.021 12.3416 6 12.4749 6C12.6083 6 12.7333 6.021 12.8499 6.063C12.9666 6.10433 13.075 6.175 13.175 6.275L21.6 14.7C21.8333 14.9333 21.95 15.225 21.95 15.575C21.95 15.925 21.825 16.225 21.575 16.475C21.325 16.725 21.0333 16.85 20.7 16.85C20.3666 16.85 20.075 16.725 19.825 16.475L12.4749 9.125L5.12495 16.475C4.89161 16.7083 4.60428 16.825 4.26295 16.825C3.92095 16.825 3.62495 16.7 3.37495 16.45C3.12495 16.2 2.99995 15.9083 2.99995 15.575C2.99995 15.2417 3.12495 14.95 3.37495 14.7Z" fill="white"/>
-        </svg>
-    </span>
-</button>
-    
+
+      
   </body>
 </html>
