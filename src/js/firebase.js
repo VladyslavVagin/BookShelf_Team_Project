@@ -1,13 +1,13 @@
 import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCIYcQ-pCSa9eZGHxuRZayvGkPR-D7VYZs",
-    authDomain: "bookshelf-12team.firebaseapp.com",
-    projectId: "bookshelf-12team",
-    storageBucket: "bookshelf-12team.appspot.com",
-    messagingSenderId: "31672773196",
-    appId: "1:31672773196:web:c1faba0517a12a4bd762e9",
-    databaseURL: "https://bookshelf-12team-default-rtdb.europe-west1.firebasedatabase.app/",
-  };
+  apiKey: "AIzaSyDGGs_M72U47x_8OPp1fXlulwAc_R9sWFw",
+  authDomain: "bookshelf-vladyslav-pr.firebaseapp.com",
+  databaseURL: "https://bookshelf-vladyslav-pr-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "bookshelf-vladyslav-pr",
+  storageBucket: "bookshelf-vladyslav-pr.appspot.com",
+  messagingSenderId: "486061422566",
+  appId: "1:486061422566:web:65c06a043c706983c1c827"
+};
   // Initialize Firebase
  export const app = initializeApp(firebaseConfig);
