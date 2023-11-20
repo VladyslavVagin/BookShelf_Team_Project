@@ -1,0 +1,104 @@
+.categories {
+  background-color: transparent;
+}
+/* Стиль Категорій під телефон */
+  .categories-div {
+    max-width: 335px;
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .categories-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .categories-item {
+    display: flex;
+    width: 307px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .categories-button {
+    display: none;
+    outline: none;
+  }
+
+  .categories-label {
+    width: 100%;
+    border: none;
+    color: var(--category-label);
+    font-size: 16px;
+    line-height: 1.125;
+    transition: all var(--animation);
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color var(--animation), opacity var(--animation);
+  }
+
+  .categories-label:hover {
+    color: var(--violet);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color var(--animation), opacity var(--animation);
+  }
+
+  .categories-div::-webkit-scrollbar {
+    width: 8px;
+  }
+  .categories-div::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .categories-div::-webkit-scrollbar-thumb {
+    background-color: #E0E0E0;
+    border-radius: 12px;
+  }
+
+/* Стиль Категорій під планшет */
+
+@media screen and (min-width: 768px) {
+  .categories-div {
+    max-width: 337px;
+    max-height: 472px;
+  }
+  .categories-list {
+    gap: 32px;
+  }
+  .categories-item {
+    width: 318px;
+    height: 24px;
+  }
+  .categories-label:hover, 
+  .categories-label {
+    font-size: 18px;
+  }
+}
+/* Стиль Категорій під десктоп */
+
+@media (min-width: 1440px) {
+  .categories-div {
+    max-width: 356px;
+  }
+  .categories-list{
+    gap: 24px;
+  }
+  .categories-item {
+    width: 328px;
+    height: 42px;
+  }
+  .categories-label{
+    padding-top: 12px;
+  }
+}
+
+.active {
+  color: var(--violet);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.12;
+  text-transform: uppercase;
+  opacity: 1;
+}
