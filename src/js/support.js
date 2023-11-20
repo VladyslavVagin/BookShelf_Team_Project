@@ -1,3 +1,4 @@
+// @ts-nocheck
 const supportArray = [
     {
       title: 'Save the Children',
@@ -127,25 +128,25 @@ const supportArray = [
   
       if (itemsBottom - slidesToScroll < 4) {
         if (arrowUp) {
-          arrowUp.classList.remove('hidden');
+          arrowUp.classList.remove('visually-hidden');
         }
         if (arrowDown) {
-          arrowDown.classList.add('hidden');
+          arrowDown.classList.add('visually-hidden');
         }
       } else {
         if (arrowUp) {
-          arrowUp.classList.add('hidden');
+          arrowUp.classList.add('visually-hidden');
         }
         if (arrowDown) {
-          arrowDown.classList.remove('hidden');
+          arrowDown.classList.remove('visually-hidden');
         }
       }
     } else {
       if (arrowUp) {
-        arrowUp.classList.add('hidden');
+        arrowUp.classList.add('visually-hidden');
       }
       if (arrowDown) {
-        arrowDown.classList.remove('hidden');
+        arrowDown.classList.remove('visually-hidden');
       }
       position = 0;
     }

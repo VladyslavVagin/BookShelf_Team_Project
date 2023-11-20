@@ -8,12 +8,6 @@
     border-radius: 16px;
   }
   
-  /* @media screen and (min-width:428px) {
-    .support{
-    max-width: 335px;
-    height: 460px;
-    }      
-  } */
   @media screen and (min-width: 768px){
     .support{
     min-width: 335px;
@@ -48,15 +42,13 @@
   }
   
   .support-button {
-    display: flex;
     background-color: #fff;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     width: 32px;
     height: 32px;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
   @media screen and (min-width: 768px) {
@@ -80,15 +72,19 @@
   
   .support-button-svg {
     fill: var(--violet);
-    margin: 0 4px 6px 0;
     width: 20px;
     height: 20px;
+    position: absolute;
+    top: 6%;
+    left: 12%;
   }  
   
   @media screen and (min-width: 768px){
     .support-button-svg{
     width: 22px;
     height: 22px;
+    top: 10%;
+    left: 14%;
     }
   }
     
