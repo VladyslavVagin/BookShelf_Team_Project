@@ -36,14 +36,13 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    transition: color var(--animation), opacity var(--animation);
+    transition: all var(--animation);;
   }
 
   .categories-label:hover {
     color: var(--violet);
     font-weight: 700;
     text-transform: uppercase;
-    transition: color var(--animation), opacity var(--animation);
   }
 
   .categories-div::-webkit-scrollbar {

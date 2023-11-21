@@ -35,7 +35,6 @@
   position: absolute;
   top: 12px;
   right: 12px;
-
   background: unset;
   border: unset;
   cursor: pointer;
@@ -43,6 +42,11 @@
 
 .close-modal-icon {
   stroke: var(--black);
+  transition: all var(--animation);
+}
+
+#closeModal:hover .close-modal-icon, #closeModal:focus .close-modal-icon {
+  stroke: var(--violet);
 }
 
 .book-modal-img {
