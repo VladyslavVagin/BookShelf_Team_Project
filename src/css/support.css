@@ -48,9 +48,7 @@
     cursor: pointer;
     width: 32px;
     height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
   @media screen and (min-width: 768px) {
@@ -76,6 +74,10 @@
     fill: var(--violet);
     width: 20px;
     height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }  
   
   @media screen and (min-width: 768px){
