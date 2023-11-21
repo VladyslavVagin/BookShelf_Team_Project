@@ -48,7 +48,9 @@
     cursor: pointer;
     width: 32px;
     height: 32px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
   @media screen and (min-width: 768px) {
@@ -74,17 +76,12 @@
     fill: var(--violet);
     width: 20px;
     height: 20px;
-    position: absolute;
-    top: 6%;
-    left: 12%;
   }  
   
   @media screen and (min-width: 768px){
     .support-button-svg{
     width: 22px;
     height: 22px;
-    top: 10%;
-    left: 14%;
     }
   }
     
