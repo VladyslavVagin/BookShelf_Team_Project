@@ -79,7 +79,7 @@ export function shoppingMarkup(arr) {
         </div>
         <button type="submit" class="delete-item" data-book-id="${_id}">
           <svg class="remove-bin" width="16" height="16">
-            <use href="${icons}#trash"></use>
+            <use href="${icons}#icon-trash"></use>
           </svg>
         </button>
       </li>
