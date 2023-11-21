@@ -100,7 +100,8 @@
 .input-field {
   position: relative;
 }
-
+.eye-icon-blocked, 
+.eye-icon, 
 .modal-user-icons {
   stroke: var(--black);
   fill: var(--white);
@@ -109,6 +110,14 @@
   right: 10%;
   transition: all var(--animation);
 }
+.eye-icon-blocked, 
+.eye-icon {
+  stroke: var(--white);
+  fill: var(--black);
+  cursor: pointer;
+}
+.modal-input:focus-within + .eye-icon-blocked,
+.modal-input:focus-within + .eye-icon, 
 .modal-input:focus-within + .modal-user-icons {
   stroke: var(--violet);
 }

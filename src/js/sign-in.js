@@ -325,3 +325,36 @@ onAuthStateChanged(auth, user => {
     onLogOutUser();
   }
 })
+
+// ===========================================================================
+// SHOW PASSWORD FUNCTION
+const iconEyeBlocked = document.querySelectorAll('.eye-icon-blocked');
+const iconsEye = document.querySelectorAll('.eye-icon');
+const inputPassword = document.querySelectorAll('.input-password');
+
+iconEyeBlocked.forEach(iconBlocked => iconBlocked.addEventListener('click', showPassword));
+iconsEye.forEach(icon => icon.addEventListener('click', hiddenPassword));
+
+function showPassword(event) {
+  event.preventDefault();
+  if (event.currentTarget) {
+   inputPassword.forEach(input => {
+     // @ts-ignore
+     input.type = 'text';
+   })
+   iconsEye.forEach(icon => icon.classList.remove('visually-hidden'));
+   iconEyeBlocked.forEach(iconB => iconB.classList.add('visually-hidden'));
+  }
+};
+
+function hiddenPassword(event) {
+  event.preventDefault();
+  if (event.currentTarget) {
+    inputPassword.forEach(input => {
+      // @ts-ignore
+      input.type = 'password';
+    })
+}
+iconsEye.forEach(icon => icon.classList.add('visually-hidden'));
+iconEyeBlocked.forEach(iconB => iconB.classList.remove('visually-hidden'));
+}
