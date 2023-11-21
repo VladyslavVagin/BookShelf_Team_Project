@@ -116,9 +116,6 @@
   border: 1.5px solid var(--black);
   outline: none;
 }
-.logout-icon-arrow {
-margin-bottom: 8px;
-}
 .burger-main-part {
   height: calc(100% - 64px);
   padding: 20px;
