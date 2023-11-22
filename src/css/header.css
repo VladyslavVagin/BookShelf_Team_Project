@@ -103,6 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 8px;
   padding: 0 12px;
   margin-left: 24px;
   border: 1px solid var(--black);
@@ -170,19 +171,28 @@
 }
 
 .header-user-image {
-  width: 37px;
-  height: 37px;
+  min-width: 37px;
+  max-width: 37px;
+  max-height: 37px;
+  min-height: 37px;
   border-radius: 37px;
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.header-user-image img {
+  border-radius: 80px;
+  background-color: inherit;
+}
 
 .header-user-name {
   color: var(--white);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .icon-arrow-down-user {
