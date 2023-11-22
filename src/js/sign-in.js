@@ -1,7 +1,5 @@
 import {
   getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithEmailAndPassword,
@@ -13,7 +11,6 @@ import { app } from './firebase';
 import Swal from 'sweetalert2';
 
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
 
 const openSignForm = document.querySelector('.js-open-signin');
 const openSignFormBurger = document.querySelector('.sign-up-btn');
@@ -330,39 +327,6 @@ onAuthStateChanged(auth, user => {
     onLogOutUser();
   }
 })
-// ========================================================================================
-// GOOGLE AUTHENTIFICATION =============================================================
-
-googleButton?.addEventListener('click', onGoogleSignIn);
-
-function onGoogleSignIn() {
-  signInWithPopup(auth, provider).then((result) => {
-    const user = result.user;
-    // @ts-ignore
-    userAvatar.innerHTML = `<img src="${user.photoURL}" alt="user-avatar"/>`;
-    toggleForm();
-  }).catch((error) => {
-    const errorMessage = error.message;
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      didOpen: toast => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      },
-    });
-    Toast.fire({
-      icon: 'error',
-      title: `${errorMessage}`,
-    });
-  }).finally(() => {
-    // window.location.reload();
-  })
-};
-
 // ===========================================================================
 // SHOW PASSWORD FUNCTION
 const iconEyeBlocked = document.querySelectorAll('.eye-icon-blocked');

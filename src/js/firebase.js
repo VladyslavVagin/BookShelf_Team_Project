@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "bookshelf-vladyslav-pr",
   storageBucket: "bookshelf-vladyslav-pr.appspot.com",
   messagingSenderId: "486061422566",
-  appId: "1:486061422566:web:65c06a043c706983c1c827"
+  appId: "1:486061422566:web:65c06a043c706983c1c827",
 };
   // Initialize Firebase
  export const app = initializeApp(firebaseConfig);
